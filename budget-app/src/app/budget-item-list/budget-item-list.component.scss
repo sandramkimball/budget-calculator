@@ -1,0 +1,40 @@
+@import '../../main-styles.scss';
+
+.budget-items-section{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+
+    .budget-items-container {
+        display: flex;
+        max-width: 680px;
+    };
+
+    .income-column, .expeses-column{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 0; // columns are same size regardless of content
+        flex-grow: 1; // columns take up all available space
+
+        h1{
+            font-family: 'Lato';
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    };
+
+    .income-column{
+        margin-right: 25%;
+        h1 {
+            color: $green;
+        }
+    };
+
+    .expeses-column{
+        h1 { 
+            color: $red;
+        }
+    }
+}

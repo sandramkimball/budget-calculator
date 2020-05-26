@@ -31,3 +31,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Notes
 - Utilizing Bulma css framework: https://bulma.io/
 - Remember to import scss into styles.scss
+- "ng generate component name"
