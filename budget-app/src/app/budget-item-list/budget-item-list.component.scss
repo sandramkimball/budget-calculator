@@ -8,10 +8,10 @@
 
     .budget-items-container {
         display: flex;
-        max-width: 680px;
+        width: 680px;
     };
 
-    .income-column, .expeses-column{
+    .income-column, .expenses-column{
         display: flex;
         flex-direction: column;
         flex-basis: 0; // columns are same size regardless of content
@@ -32,9 +32,15 @@
         }
     };
 
-    .expeses-column{
+    .expenses-column{
         h1 { 
             color: $red;
         }
+    }
+
+    .budget-items {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
     }
 }

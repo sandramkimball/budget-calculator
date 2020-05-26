@@ -1,0 +1,86 @@
+@import '../../../main-styles.scss';
+
+.root {
+    display: flex;
+    width: 100%;
+    position: relative;
+    &:hover{
+        .x-icon-btn{
+            opacity: 1;
+            transform: scale(1)
+        }
+    }
+    .x-icon-btn{
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background: lighten($dark, 17%);
+        background-image: url('../../../assets/delete_icon.svg');
+        top: -14px; //half of height
+        right: -14px; //half of width
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transform: scale(0); //hide icon until hover
+        transition: opacity 0.2s ease-in, transform 0.2s ease-out;
+        opacity: 0;
+
+        &:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+
+    
+}
+
+
+.budget-item {
+    display: flex;
+    width: 100%;
+    background-color: $light-gray;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease-out;
+    &:hover {
+        background-color: darken($light-gray, 2%)
+    }
+
+    .description {
+        flex-grow: 1; // grow to take up remaining space. which shifts amount to far right
+        font-size: 10px;
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .amount {
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+
+}
+
+.expenses {
+    p{
+        color: $red;
+    }
+
+    .amount {
+        background-color: $light-red;
+    }
+}
+
+.income {
+    p{
+        color: $green;
+    }
+
+    .amount {
+        background-color: $light-green;
+    }
+}
