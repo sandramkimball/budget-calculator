@@ -6,10 +6,9 @@
                 <p class='control'>
                     <input 
                         type='number' 
-                        required
+                        required name='amount'
                         class='input' 
                         placeholder='Amount' 
-                        name='amount'
                         style='width: 100px'
                         [ngModel]='item.amount'
                     />
@@ -20,8 +19,7 @@
                 <p class='control'>
                     <input 
                         type='text' 
-                        required
-                        name='description'
+                        required name='description'
                         class='input' 
                         placeholder='Description'
                         [ngModel]='item.description'

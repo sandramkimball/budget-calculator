@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BudgetItem } from '../../../shared/models/budget-item.model'
 
 @Component({
   selector: 'app-budget-item-card',
@@ -7,11 +8,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BudgetItemCardComponent implements OnInit {
 
-  @Input() isIncome: boolean = true;
+  // In order to render the input values
+  @Input() item: BudgetItem;
+  //<any> or <void> because we're not sending new data
+  @Output() xButtonClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // not the actual delete method
+  // sends item up to parent (list) to send up (mainpage) to be deleted
+  onXButtonClick(){
+    // emit an event
+    this.xButtonClick.emit();
   }
 
 }

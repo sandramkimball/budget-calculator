@@ -10,14 +10,23 @@ import { BudgetItem } from 'src/shared/models/budget-item.model';
 export class AddItemFormComponent implements OnInit {
 
   // Takes in binded form inputs and creates new object from BudgetItem model.
-  @Input() item: BudgetItem = new BudgetItem('', null)//(description, amount)
+  @Input() item: BudgetItem 
   // Submit new objects using EventEmitter (which is like =(e)=> )
   @Output() formSubmit: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
 
 
+  isNewItem: boolean;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    //check for item has value
+    if (this.item){
+      this.isNewItem = false
+    } else {
+      this.isNewItem = true;
+      this.item = new BudgetItem('', null)
+    }
   }
 
   // Define onSubmit function
