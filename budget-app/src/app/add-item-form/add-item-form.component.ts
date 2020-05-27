@@ -14,7 +14,7 @@ export class AddItemFormComponent implements OnInit {
   // Submit new objects using EventEmitter (which is like =(e)=> )
   @Output() formSubmit: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
 
-
+  //conditionally render Add item, or Save update item button.
   isNewItem: boolean;
 
   constructor() { }
@@ -32,5 +32,6 @@ export class AddItemFormComponent implements OnInit {
   // Define onSubmit function
   onSubmit(form: NgForm){
     this.formSubmit.emit(form.value)
+    form.reset()
   }
 }

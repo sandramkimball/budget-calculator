@@ -10,8 +10,9 @@ export class BudgetItemCardComponent implements OnInit {
 
   // In order to render the input values
   @Input() item: BudgetItem;
-  //<any> or <void> because we're not sending new data
+  //<any> or <void> because we're not sending new data, we're sending already bound data
   @Output() xButtonClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
@@ -23,6 +24,10 @@ export class BudgetItemCardComponent implements OnInit {
   onXButtonClick(){
     // emit an event
     this.xButtonClick.emit();
+  }
+
+  onCardClick(){
+    this.cardClick.emit();
   }
 
 }
