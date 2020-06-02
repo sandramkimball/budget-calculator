@@ -33,7 +33,6 @@ export class BudgetItemListComponent implements OnInit {
   })
   
   currentBudgetList = []
-
   // Data Storage Key:
   STORAGE_KEY = 'storedBudgetItems'
 
