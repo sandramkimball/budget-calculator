@@ -34,8 +34,8 @@
                     [ngClass] ="{ 'is-primary': isNewItem, 'is-success': !isNewItem}"
                     [disabled]='!itemForm.valid'
                 >
-                    <p *ngIf='isNewItem'>Add</p>
-                    <p *ngIf='!isNewItem'>Save</p>
+                    <p style='margin: auto;' *ngIf='isNewItem'>Add</p>
+                    <p style='margin: auto;'*ngIf='!isNewItem'>Save</p>
                 </button>
             </div>
     

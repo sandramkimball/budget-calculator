@@ -2,18 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { BudgetItem } from 'src/shared/models/budget-item.model';
 import { UpdateEvent } from '../budget-item-list/budget-item-list.component';
 
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
+
+
 export class MainPageComponent implements OnInit {
 
   // Init the array
   budgetItems: BudgetItem[] = new Array<BudgetItem>();
   totalBudget: number = 0;
 
-  constructor() { }
+  // Inject local storage
+  constructor() {}
 
   ngOnInit(): void {
   }
