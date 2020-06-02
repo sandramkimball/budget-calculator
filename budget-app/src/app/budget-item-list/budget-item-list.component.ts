@@ -1,7 +1,13 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Injectable } from '@angular/core';
 import { BudgetItem } from '../../shared/models/budget-item.model';
 import { MatDialog } from '@angular/material/dialog';
 import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.component'
+
+// for LocalStorage
+import { NgModule } from '@angular/core';
+import { StorageServiceModule } from 'ngx-webstorage-service';
+import { Injectable, Inject } from '@angular/core';
+import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 
 @Component({
   selector: 'app-budget-item-list',
@@ -9,9 +15,9 @@ import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.compo
   styleUrls: ['./budget-item-list.component.scss']
 })
 
+@Injectable()
 
 export class BudgetItemListComponent implements OnInit {
-
   // In order to conditionally render budget items, need to create array of data 
   // using the imported model
   @Input() budgetItems: BudgetItem[];
@@ -20,11 +26,34 @@ export class BudgetItemListComponent implements OnInit {
   @Output() delete: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
   //for purpose of updating total price:
   @Output() update: EventEmitter<UpdateEvent> = new EventEmitter<UpdateEvent>();
+  
+  // LocalStorage Module
+  @NgModule({
+    imports: [ StorageServiceModule ]
+  })
+  
+  currentBudgetList = []
 
-  constructor( public dialog: MatDialog ) {  }
+  // Data Storage Key:
+  STORAGE_KEY = 'storedBudgetItems'
 
-  ngOnInit(): void {
+  // Inject local storage
+  constructor(public dialog: MatDialog, @Inject (LOCAL_STORAGE) private storage: StorageService) {}
+  
+  public storeOnLocalStorage(description: string, amount: number): void{
+    // get array of budget items from local storage
+    this.currentBudgetList.push(this.storage.get(this.STORAGE_KEY) || []);
+
+    // push new budget item to array
+    this.currentBudgetList.push(this.budgetItems)
+
+    // insert updated array to local storage
+    this.storage.set(this.STORAGE_KEY, this.currentBudgetList)
+    console.log('localStorage in main pg', this.storage.get(this.STORAGE_KEY))
   }
+  
+
+  ngOnInit(): void {}
 
   //sends item as the event data
   onDelete(item: BudgetItem){
