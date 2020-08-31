@@ -1,0 +1,16 @@
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\bin\Debug\netcoreapp3.1\PropertyFolio.exe
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\bin\Debug\netcoreapp3.1\PropertyFolio.deps.json
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\bin\Debug\netcoreapp3.1\PropertyFolio.runtimeconfig.json
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\bin\Debug\netcoreapp3.1\PropertyFolio.runtimeconfig.dev.json
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\bin\Debug\netcoreapp3.1\PropertyFolio.dll
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\bin\Debug\netcoreapp3.1\PropertyFolio.pdb
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.csprojAssemblyReference.cache
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.csproj.CoreCompileInputs.cache
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.AssemblyInfoInputs.cache
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.AssemblyInfo.cs
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.dll
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.pdb
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.genruntimeconfig.cache
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.Form1.resources
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.Properties.Resources.resources
+C:\Users\Sandra\Documents\SIDE PROJECTS\PropertyFolio\obj\Debug\netcoreapp3.1\PropertyFolio.csproj.GenerateResource.cache
